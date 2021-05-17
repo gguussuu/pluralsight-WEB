@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/062628460c.js" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+></script>
+
+    <style type="text/css">
+    ul.gnb li.active::after, .sign.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -38px;
+  left: 0;
+  background-color: #ec008c;
+  z-index: 9999;
+}
+.go_btn::after{
+  content: "\f105";
+    margin-left: 4px;
+    font-family: FontAwesome;
+    color: #EC008C;
+    font-size: 12px;
+}
+    </style>
+  </head>
+  <body>
+<header class=" w-full fixed  text-white z-50 " style="background-color: #222; height: 90px;">
+<div class=" p-5 flex mx-auto" style="max-width: 1400px;">
+  <div class="flex-grow-0 "><a href="#" class="block w-48"><img src="img/PS_logo.png" class="block"></a></div>
+<div class="flex-grow ml-4 m-auto justify-around">
+  <ul class="gnb flex my-auto">
+    <li class="relative px-4 sub_btn"><a href="#" class="font-black">Platform <i class="fa fa-chevron-right fa-rotate-90 inline-block ml-1" aria-hidden="true" style="font-size: 8px;"></i></a>
+    <div class="fixed hidden" id="sub-menu" style=" top: 90px; left: 0; right: 0; bottom: 0;">
+      <div class="flex my-0 mx-auto relative  bg-black" style="max-width: 1230px;">
+        <div class="flex justify-between w-full">        
+            <div class="flex p-10 felx-col" style="flex: 0 0 360px;">
+                  <div class="w-full border-r border-gray-300">
+               <p class="uppercase text-gray-300 text-sm mb-5">ways to upskill</p>
+            <div class="flex flex-col">
+              <a href="#" class="pb-5 text-lg font-black"><i class="fa fa-flask inline-block mr-3" aria-hidden="true"></i>Courses</a>
+              <a href="#" class="pb-5 text-lg font-black"><i class="fa fa-flask inline-block mr-3" aria-hidden="true"></i>Skill assessments</a>
+              <a href="#" class="pb-5 text-lg font-black"><i class="fa fa-flask inline-block mr-3" aria-hidden="true"></i>Labs
+              <span class="inline-block uppercase ml-2 bg-red-500" style="padding: 5px 8px; line-height: 1.1; font-size: 10px;" >new</span></a>
+              <a href="#" class="pb-5 text-lg font-black"><i class="fa fa-flask inline-block mr-3" aria-hidden="true"></i>Hands-on learning</a>
+              <a href="#" class="pb-5 text-lg font-black"><i class="fa fa-flask inline-block mr-3" aria-hidden="true"></i>Certification prep</a>
+              <a href="#" class="text-lg font-black" ><i class="fa fa-flask inline-block mr-3" aria-hidden="true"></i>Team efficiency</a>
+            </div>
+          </div>
+        
+        </div>
+          <div class="flex flex-col" style="flex:7;">
+            <div class="p-10 pl-0">
+              <div class="flex flex-row pb-10">
+                <div style="flex: 3;">
+                <p class="uppercase text-gray-300 text-sm mb-5">skills for</p>
+                <div class="flex flex-col">
+                  <a href="#" class="pb-3  font-black">Software development</a>
+                  <a href="#" class="pb-3  font-black">IT ops</a>
+                  <a href="#" class="pb-3  font-black">Info &amp; cyber security</a>
+                  <a href="#" class="pb-3 font-black">Cloud computing</a>
+                  <a href="#" class="pb-3  font-black">Machine learning / AI</a>
+                  <a href="#" class=" font-black">Data professional</a>
+                </div>
+              </div>
+              <div style="flex: 7;">
+                <p class="uppercase text-gray-300 text-sm mb-5">top trending paths</p>
+                <div class="w-full">
+                  <div class=" flex flex-row flex-wrap">
+                    <a href="#" alt="" class="pr-2 pb-4 w-1/2 ">
+                      <div class="rounded-lg  flex py-3 px-5  items-center" style="background-color: #222;">
+                      <img src="img/ps-icon.png" alt="" class="w-5 h-auto">
+                      <div class="flex flex-col ml-10">
+                        <span class="text-xs font-bold"><b>Microsoft Azure Deployment</b> </span>
+                        <span class=" text-white">4 <b class="text-gray-400 text-xs">Courses </b> 7 <b class="text-gray-400 text-xs">Hours </b><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 12px;"></i> </span>
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#" alt="" class="px-2 pb-4 w-1/2 ">
+                      <div class="rounded-lg  flex py-3 px-5  items-center" style="background-color: #222;">
+                      <img src="img/ps-icon.png" alt="" class="w-5 h-auto">
+                      <div class="flex flex-col ml-10">
+                        <span class="text-xs font-bold"><b>AWS Operations</b> </span>
+                        <span class=" text-white">7 <b class="text-gray-400 text-xs">Courses </b> 14 <b class="text-gray-400 text-xs">Hours </b><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 12px;"></i> </span>
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#" alt="" class="pr-2 pb-4 w-1/2 ">
+                      <div class="rounded-lg  flex py-3 px-5 items-center" style="background-color: #222;">
+                      <img src="img/ps-icon.png" alt="" class="w-5 h-auto">
+                      <div class="flex flex-col ml-10">
+                        <span class="text-xs font-bold"><b>Cleaning Data with R</b> </span>
+                        <span class=" text-white">5 <b class="text-gray-400 text-xs">Courses </b> 8 <b class="text-gray-400 text-xs">Hours </b><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 12px;"></i> </span>
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#" alt="" class="px-2 pb-4 w-1/2 ">
+                      <div class="rounded-lg  flex py-3 px-5  items-center" style="background-color: #222;">
+                      <img src="img/ps-icon.png" alt="" class="w-5 h-auto">
+                      <div class="flex flex-col ml-10">
+                        <span class="text-xs font-bold"><b>Core Python</b> </span>
+                        <span class=" text-white">22 <b class="text-gray-400 text-xs">Courses </b> 39 <b class="text-gray-400 text-xs">Hours </b><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 12px;"></i> </span>
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#" alt="" class="pr-2 w-1/2 ">
+                      <div class="rounded-lg  flex py-3 px-5  items-center" style="background-color: #222;">
+                      <img src="img/ps-icon.png" alt="" class="w-5 h-auto">
+                      <div class="flex flex-col ml-10">
+                        <span class="text-xs font-bold"><b>Ruby Language Fundamentals</b> </span>
+                        <span class=" text-white">7 <b class="text-gray-400 text-xs">Courses </b> 13 <b class="text-gray-400 text-xs">Hours </b><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 12px;"></i> </span>
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#" alt="" class="px-2 w-1/2 ">
+                      <div class="rounded-lg  flex py-3 px-5  items-center" style="background-color: #222;">
+                      <img src="img/ps-icon.png" alt="" class="w-5 h-auto">
+                      <div class="flex flex-col ml-10">
+                        <span class="text-xs font-bold"><b>Java Language Fundamentals</b> </span>
+                        <span class=" text-white">21 <b class="text-gray-400 text-xs">Courses </b> 50 <b class="text-gray-400 text-xs">Hours </b><i class="fa fa-comment-o" aria-hidden="true" style="font-size: 12px;"></i> </span>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                 
+                </div>
+              </div>
+              </div>
+              <div class="w-full pt-5" style="border-top: 1px solid #fff;">
+                <div class="flex content-evenly">
+                  <a href="#" class="font-bold pr-3">See our entire course library</a>
+                  <div class="borderri pl-3" style="border-left: 1px solid #fff;"> <a href="#" class="font-bold">Check out the Technology Index</a></div>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        
+      </div>
+        <button class="absolute top-2 right-4 text-white"><i class="fa fa-times" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </li>
+    <li class=" relative px-4 sub_btn"><a href="#" class="font-black pr-1">Products <i class="fa fa-chevron-right fa-rotate-90 inline-block ml-1" aria-hidden="true" style="font-size: 8px;"></i></a>
+      <div id="sub-menu" class="fixed bg-black hidden" style="top: 90px; left: 50%; transform: translateX(-50%);">
+        <div class="flex p-10">
+          <div >
+            <div class=" border-gray-600  pb-5 border-b">
+            <img src="img/logo-skills.png" style="max-width: 120px;">
+            <p class="mt-3">Build tech skills to drive results</p>
+          </div>
+          <div class="pt-5">
+            <p class="font-black mb-3 text-lg"><a href="#">What is Skills?</a></p>
+            <p class="font-black text-lg"><a href="#">View plans</a></p>
+          </div>
+        </div>
+         <div class="border-r border-gray-600 ml-10"></div>
+          <div class="pl-10 ">
+            <div class="pb-5 border-b border-gray-600 ">
+            <img src="img/logo-skills.png" style="max-width: 120px;">
+            <p class="mt-3">Get insights into your workflow</p>
+          </div>
+          <div class="pt-5">
+            <p class="font-black mb-3 text-lg"><a href="#">What is Flow?</a></p>
+            <p class="font-black text-lg"><a href="#">View plans</a></p>
+          </div>
+          </div>
+        </div>
+        <button class="absolute top-2 right-4 text-white"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+      </div>
+    </li>
+      <li class="px-4 relative sub_btn"><a href="#" class="font-black mr-1">Resources <i class="fa fa-chevron-right fa-rotate-90 inline-block ml-1" aria-hidden="true" style="font-size: 8px;"></i></a>
+        <div id="sub-menu" class="fixed bg-black hidden" style="top: 90px; left: 50%; transform: translateX(-50%); width: 85%;">
+          <div class="flex content-between">
+            <div class="flex-1" >
+              <div class="flex p-10" style="flex-basis: 50%;"> 
+                <div class="flex-auto border-gray-600 border-r">
+                  <p class=" uppercase text-gray-500 text-sm font-black mb-5">learn</p>
+                  <div class="flex flex-col font-black">
+                    <a href="#" class="mb-3">Blog</a>
+                    <a href="#" class="mb-3">Customer stories</a>
+                    <a href="#" class="mb-3">Resource center</a>
+                    <a href="#" class="mb-3">Guides</a>
+                    <a href="#" class="mb-3">App download</a>
+                    <a href="#" class="mb-3">Support</a>
+                  </div>
+                </div>
+                <div class="flex-auto pl-10 ">
+                  <p class=" uppercase text-gray-500 text-sm font-black mb-5">connect</p>
+                  <div class="flex flex-col font-black">
+                    <a href="#" class="mb-3">Events</a>
+                    <a href="#" class="mb-3">Webinars</a>
+                    <a href="#" class="mb-3">Podcast</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+         
+           <div class="flex-1 bg-cover bg-center" style="background-image: url(img/resource-bg.png);">
+            <div class="p-10 ">
+              <img src="img/logo-skills.png" alt="">
+              <p class=" mt-5 mb-16 text-lg">Pluralsight turns Home Depot associates into skilled technologists via OrangeMethod.</p>
+              <span class="font-black text-base uppercase px-8 py-4 bg-pink-600 text-white rounded-sm"><a href="#">learn more</a></span>
+           
+            </div>
+          </div>
+          </div>
+  <button class="absolute top-3 right-3">X</button>
+        </div></li>
+        <li><a href="#" class="font-black mr-1">For Individuals </a>
+         </li>
+  </ul>
+</div>
+<div class="flex-grow-0  my-auto">
+  <a href="#" class="search_list"><i class="fas fa-search text-lg"></i>
+    <div class="s_con fixed bg-black w-full left-0 hidden" style="top: 90px;">
+      <div class="flex  py-5  mx-auto relative items-center flex-wrap justify-around" style="max-width:1400px;">
+        <i class="fas fa-search text-lg"></i>
+        <div class="w-11/12 ">
+          <input class="w-full bg-transparent text-white font-black" type="text" placeholder="What do you want to learn?">
+        </div>
+        <button class="text-lg text-white"><i class="fa fa-times" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </a>
+  <a href="#" class="px-4 font-bold sign relative">Sign in<i class="fa fa-chevron-right fa-rotate-90 inline-block ml-2" aria-hidden="true" style="font-size: 8px;"></i>
+    <div id="sub-menu" class="fixed bg-black hidden" style="top: 90px; right: 12%;">
+      <div class="flex p-10 justify-between">
+        <div class="flex-1 border-r border-gray-400 pr-10">
+          <p class="font-black text-gray-400 uppercase pb-5 text-xs">sign in with</p>
+          <img src="img/logo-skills.png" alt="" style="max-width: 120px;">
+        </div>
+        <div class="flex-1 pl-10">
+          <p class="font-black text-gray-400 uppercase pb-5 text-xs">sign in with</p>
+          <img src="img/logo-skills.png" alt="" style="max-width: 120px;">
+        </div>
+      </div>
+      <button class="absolute top-2 right-4 text-white"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+  </a>
+  <a href="#" class=" font-bold mt-5 border px-5 py-2 text-sm rounded-sm">TRY FOR FREE</a>
+</div>
+</div>
+</header>
+<main>
+<section class="w-full bg-green-200 pt-20 pb-28">
+  <div class="container mx-auto lg:w-4/5 object-cover my-auto relative ">
+  <img src="img/main_img.png" alt="" class="block mt-5">
+  <div class="text-area relative font-bold " style="margin-top: -230px;">
+    <p class="text-2xl">an annual standard <span> or premium subscription</span></p>
+    <h2 class="text-3xl mb-5">ENDS TOMORROW</h2>
+    <div class="count mb-5">
+      <ul class="flex justify-between font-bold" style="max-width:580px;">
+        <li class="text-3xl items-center justify-center flex">1<span class="uppercase text-xs inline-block ml-2">Days</span></li>
+        <li class="text-3xl items-center justify-center flex">2<span class="uppercase text-xs inline-block ml-2">Hrs</span></li>
+        <li class="text-3xl items-center justify-center flex">3<span class="uppercase text-xs inline-block ml-2" >MINS</span></li>
+        <li class="text-3xl items-center justify-center flex">4<span class="uppercase text-xs inline-block ml-2">Secs</span></li>
+      </ul>
+
+    </div>
+    <button class="px-16 py-3 bg-black text-white uppercase font-bold">save now</button>
+  </div>
+</div>
+</section>
+<section class=" w-full   bg-black px-8 py-24   " >
+  <div class="flex flex-row-reverse  flex-wrap mx-auto" style="max-width:1400px;">
+  <div class="flex flex-col mt-12" style="flex: 2">
+      <p class="uppercase text-pink-600 font-bold mb-3">trending technologies</p>
+      <h3 class="text-white font-bold text-4xl">Popular topics<br/>
+        to learn now</h3>
+        <p class=" text-white mt-5">Not sure what technologies to focus on? The Technology Index ranks 850+ technologies by their relative popularity. See what’s topping the charts and get recommended courses to skill up.</p>
+        <a href="#" class="text-white block font-bold mt-5 go_btn">View the index </a>
+  </div>
+  <div class="pr-5" style="flex: 3">
+    <div class="flex-wrap flex">
+      <div class="flex-item p-5  " style="flex-basis: 50%;">
+       <div class="container  px-5 py-5 rounded-lg relative " style="background-color: #222;">
+        <a href="#" class="flex flex-col flex-grow-1">
+        <div class="top text-pink-600 uppercase text-sm font-bold mb-3">path</div>
+        <div class="con_title text-white  text-xl">Javascript</div>
+        <p class="text-white text-base">11<span class="inline-block ml-1" style="color: #aaa;">Courses</span></p>
+        <div class="go_btn mt-3 leading-9 text-white font-bold">Take a look</div>
+        <div class="absolute top-0 right-0 w-24"><img src="img/javascript.png" alt="" class="block"></div>
+      </a>
+       </div>
+        </div>
+        <div class="flex-item p-5  " style="flex-basis: 50%;">
+          <div class="container  px-5 py-5 rounded-lg relative " style="background-color: #222;">
+            <a href="#" class="flex flex-col flex-grow-1">
+            <div class="top text-pink-600 uppercase text-sm font-bold mb-3">path</div>
+            <div class="con_title text-white  text-xl">Angular</div>
+            <p class="text-white text-base">14<span class="inline-block ml-1" style="color: #aaa;">Courses</span></p>
+            <div class="go_btn mt-3 leading-9 text-white font-bold">Take a look</div>
+            <div class="absolute top-0 right-0 w-24"><img src="img/angular.png" alt="" class="block"></div>
+          </a>
+           </div>
+           </div>
+           <div class="flex-item p-5  " style="flex-basis: 50%;">
+            <div class="container flex px-5 py-5 rounded-lg relative flex-col" style="background-color: #222;">
+              <a href="#" class="flex flex-col flex-grow-1">
+                <div class="top text-pink-600 uppercase text-sm font-bold mb-3">path</div>
+                <div class="con_title text-white  text-xl">Core Python</div>
+                <p class="text-white text-base">12<span class="inline-block ml-1" style="color: #aaa;">Courses</span></p>
+                <div class="go_btn mt-3 leading-9 text-white font-bold">Take a look</div>
+                <div class="absolute top-0 right-0 w-24"><img src="img/python.png" alt="" class="block"></div>
+              </a>
+             </div>
+             </div>
+             <div class="flex-item p-5  " style="flex-basis: 50%;">
+              <div class="container flex px-5 py-5 rounded-lg relative flex-col" style="background-color: #222;">
+                <a href="#" class="flex flex-col flex-grow-1">
+                  <div class="top text-pink-600 uppercase text-sm font-bold mb-3">path</div>
+                  <div class="con_title text-white  text-xl">C#</div>
+                  <p class="text-white text-base">19<span class="inline-block ml-1" style="color: #aaa;">Courses</span></p>
+                  <div class="go_btn mt-3 leading-9 text-white font-bold">Take a look</div>
+                  <div class="absolute top-0 right-0 w-24"><img src="img/csharp.png" alt="" class="block"></div>
+                </a>
+               </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class=" py-20 px-5" style="background-color: #181818;">
+  <div class="mx-auto" style="max-width: 1400px;">
+  <p class="uppercase text-pink-600 font-bold text-lg">SEE WHAT'S NEW</p>
+  <h3 class="text-white font-bold text-3xl mt-5">Our latest features</h3>
+  <div class="rounded-lg w-full md:flex  mt-5" style="background-color: #222;">
+    <div class=" relative  flex-1" >
+    <div class=" text-white px-7 py-5">
+      <div class="what-top mb-5 pt-10">
+        <img src="img/logo-skills.png" alt="" class="max-w-none w-auto mr-3 max-h-5 inline-block"><span class="font-bold">LABS</span>
+      </div>
+      <div class="what-tit">
+        <h3 class="text-3xl font-bold">Create better cloud outcomes with hands-on experience</h3>
+      </div>
+      <p class="mt-5">Your teams need the right skills and a place to practice to ensure they’re ready to deliver on your cloud objectives. Labs enable learners to get hands-on practice in a provisioned cloud environment in AWS, Azure and Google Cloud (Google Cloud powered by Quiklabs)</p>
+      <div class="go_btn mt-8"><a href="#" class="text-white font-bold">Learn more</a></div>
+    </div>
+  </div>
+    <div class=" flex-1 ">
+      <img src="img/content_img01.png" alt="" class="block w-full h-full">
+    </div>
+    </div>
+  <div class="flex mt-8">
+    <div class="flex-item p-5  text-white" style="flex-basis: 33.33%;">
+      <div class="container flex px-7 py-12 rounded-lg relative flex-col h-full" style="background-color: #222; ">
+        <img src="img/certification.png" alt="" class=" mb-5 align-middle" >
+        <div class="what-tit">
+          <h3 class="text-3xl font-bold">Empower your teams to grow their skills and their careers</h3>
+        </div>
+        <p class="mt-5">Prepare your team for certification exams with our expert authored content and practice exams.</p>
+        <div class="go_btn mt-5"><a href="#" class="text-white font-bold">Learn more</a></div>
+
+      </div>
+       </div>
+       <div class="flex-item p-5  text-white" style="flex-basis: 33.33%;">
+        <div class="container flex px-7 py-12 rounded-lg relative flex-col h-full" style="background-color: #222;">
+          <img src="img/delivery.png" alt="" class=" mb-5 align-middle" >
+          <div class="what-tit">
+            <h3 class="text-3xl font-bold">Make lasting workflow improvements with insights from your Jira data</h3>
+          </div>
+          <p class="mt-5">Go beyond Jira data and get visibility into what’s happening within your user stories, tasks and bugs. Flow’s delivery module helps you better understand how your team is working and can make lasting improvements to your workflow.</p>
+          <div class="go_btn mt-5"><a href="#" class="text-white font-bold">Learn more</a></div>
+  
+        </div>
+         </div>
+         <div class="flex-item p-5  text-white" style="flex-basis: 33.33%;">
+          <div class="container flex px-7 py-12 rounded-lg relative flex-col h-full" style="background-color: #222;">
+            <img src="img/sandboxes.png" alt="" class=" mb-5 align-middle" >
+            <div class="what-tit">
+              <h3 class="text-3xl font-bold">Utilize a space for unrestricted exploration</h3>
+            </div>
+            <p class="mt-5">Sandboxes gives your team a safe environment to practice what they're learning from expert-authored courses.</p>
+            <div class="go_btn mt-5"><a href="#" class="text-white font-bold">Learn more</a></div>
+          </div>
+           </div>
+  </div>
+</div>
+</section>
+
+<section class="bg-black py-20  px-5">
+  <div class="mx-auto" style="max-width: 1400px;">
+    <p class="uppercase text-pink-600 font-bold mb-3">keep up to date</p>
+    <h3 class="text-white font-bold text-3xl">Discover more about Pluralsight</h3>
+  <div class="flex mt-7 justify-between ">
+    <div class="flex-item " style="flex-basis: 24%;">
+      <div class="container" >
+        <img src="img/content_img01.png" alt="" class="rounded-2xl">
+        <p class="mt-5 font-bold text-yellow-400">GUIDE: NAVIGATING BETWEEN<br/> WATERFALL AND AGILE</p>
+        <p class="mt-5 text-white">Make the move without getting stuck in the wagile trap.</p>
+      </div>
+    </div>
+    <div class="flex-item " style="flex-basis: 24%;">
+      <div class="container" >
+        <img src="img/content_img01.png" alt="" class="rounded-2xl">
+        <p class="mt-5 font-bold text-yellow-400">WHAT IS PLURALSIGHT SKILLS?</p>
+        <p class="mt-5 text-white">Discover the fastest, most effective path to developing technology skills.</p>
+      </div>
+    </div>
+    <div class="flex-item " style="flex-basis: 24%;">
+      <div class="container" >
+        <img src="img/content_img01.png" alt="" class="rounded-2xl">
+        <p class="mt-5 font-bold text-yellow-400">CREATE YOUR FREE ACCOUNT</p>
+        <p class="mt-5 text-white">Build new tech skills on us with free access to 50+ expert-led courses, assessments and more.</p>
+      </div>
+    </div>
+    <div class="flex-item " style="flex-basis: 24%;">
+      <div class="container" >
+        <img src="img/content_img01.png" alt="" class="rounded-2xl">
+        <p class="mt-5 font-bold text-yellow-400">WHAT IS PLURALSIGHT FLOW?</p>
+        <p class="mt-5 text-white">See how our engineering analytics platform gives you everything you need to build a more efficient workflow.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="w-full flex">
+  <div class="bg-center bg-cover flex-none w-3/5" style=" background-image: url(img/image-res.png);"></div>
+  <div class="bg-gradient-to-r from-pink-500 to-red-500 flex-1" >
+    <div class="py-28 px-12">
+      <img src="img/vmware.png" alt="" class="mb-5" style="max-width: 120px;">
+      <h3 class="text-white text-3xl font-black">Winning the talent war with a scalable tech skills platform</h3>
+    <p class="text-white mt-5">Evolving a 20-year-old company, increasing innovation and accelerating time to delivery requires fresh skills. See how VMware’s globally dispersed teams use Pluralsight to leverage the latest developments in technology as they find new ways to serve customers.</p>
+    <a href="#" class="inline-block text-white  font-bold mt-5 bg-black px-8 py-3">HOW THEY'RE SKILLING UP </a>
+    </div>
+</div>
+</section>
+<section class="bg-black py-20 px-5">
+  <div class="mx-auto" style="max-width: 1400px;">
+  <p class="uppercase text-pink-600 font-bold mb-3 text-center">follow us</p>
+  <h3 class="text-white font-bold text-4xl text-center">Share your skills</h3>
+
+  <div id="slider" class="swiper-container w-full mt-20">
+    <div class="swiper-wrapper ">
+        <div class="swiper-slide bg-center shadow-lg " >
+            <div class="container mx-auto flex items-stretch justify-center" style="width: 95%;">
+                <div class="w-1/3 p-3 ">
+                    <div class="bg-white rounded-lg p-5 relative  h-full">
+                      <div class="relative h-full">
+                      <div class="flex">
+                        <a href="#" class="inline-block"><img src="img/face.jpg" alt="" class="inline-block" style="width: 36px; height: 36px;"></a>
+                        <div class="flex flex-col ml-3">
+                          <span class="text-sm font-bold"><a href="#">Martin Therkelsen</a> </span>
+                          <span class="text-xs text-gray-500"><a href="#">@Mracket</a> </span>
+                        </div>
+                      </div>
+                        <p class="text-sm mt-5 mb-5">Yesterday I passed the AZ-104 exam. <a href="#" class="text-pink-500">@pluralsight</a> courses are great to help prepare for these exams. <a href="#" class="text-pink-500">#citrixctp</a><a href="#" class="text-pink-500">#azure</a>
+                        </p>
+                        <div class="flex absolute bottom-0 left-0">
+                          <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                        <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                        <a href="#" class="w-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                        </div>
+                      </div>
+                      <img src="img/twitter-logo.png" alt="" class="absolute right-4 top-4 w-4">
+                    </div>
+                    
+                </div>
+                <div class="w-1/3 p-3" >
+                  <div class="bg-white rounded-lg p-5 relative h-full">
+                    <div class="relative h-full">
+                    <div class="flex">
+                      <a href="#" class="inline-block"><img src="img/face.jpg" alt="" class="inline-block" style="width: 36px; height: 36px;"></a>
+                      <div class="flex flex-col ml-3">
+                        <span class="text-sm font-bold"><a href="#">William masci</a> </span>
+                        <span class="text-xs text-gray-500"><a href="#">@bill_ver3</a> </span>
+                      </div>
+                    </div>
+                      <p class="text-sm mt-5 mb-5">Just passed the <a href="#" class="text-pink-500">#Cisco</a> DEVASC 200-901 exam! Tough exam, but it was a grat experience. I'm excited to be part of the <a href="#" class="text-pink-500">#DevNet</a>Class of 2020! Also big thanks to <a href="#" class="text-pink-500">@nickrusso42518</a>for his amazing study plan and <a href="#" class="text-pink-500">@pluralsight</a> course. I highly recommend it if you're studying for DEVASC
+                      </p>
+                      <div class="flex absolute bottom-0 left-0">
+                        <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                        <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                        <a href="#" class="w-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                      </div>
+                    </div>
+                    <img src="img/twitter-logo.png" alt="" class="absolute right-4 top-4 w-4">
+                  </div>
+              </div>
+              <div class="w-1/3 p-3" >
+                <div class="bg-white rounded-lg p-5 relative h-full">
+                  <div class="relative h-full">
+                  <div class="flex">
+                    <a href="#" class="inline-block"><img src="img/face.jpg" alt="" class="inline-block" style="width: 36px; height: 36px;"></a>
+                    <div class="flex flex-col ml-3">
+                      <span class="text-sm font-bold"><a href="#">Judy</a> </span>
+                      <span class="text-xs text-gray-500"><a href="#">@Amegbe Judith</a> </span>
+                    </div>
+                  </div>
+                    <p class="text-sm mt-5 pb-10">The best thing taht happened to me in 2020 was <a href="#" class="text-pink-500">#GADS2020</a> which introduced me to <a href="#" class="text-pink-500">@pluralsight</a> . My interest in IT and prograamming peaked when i joined the program and now i believe this is the career path i want to take. <a href="#" class="text-pink-500">#womenintech #WomenWhoCode #Andela #Pluralsight #GADS https://t.co./oYchlj6V5W</a>
+                    </p>
+                    <div class="flex absolute bottom-0 left-0">
+                      <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                      <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                      <a href="#" class="w-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                    </div>
+                  </div>
+                  <img src="img/twitter-logo.png" alt="" class="absolute right-4 top-4 w-4">
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- .swiper-slide -->
+        <div class="swiper-slide bg-center shadow-lg" >
+          <div class="container mx-auto flex items-stretch" style="width: 95%;">
+              <div class="w-1/3 p-3" >
+                  <div class="bg-white rounded-lg p-5 relative h-full">
+                    <div class="relative h-full">
+                    <div class="flex">
+                      <a href="#" class="inline-block"><img src="img/face.jpg" alt="" class="inline-block" style="width: 36px; height: 36px;"></a>
+                      <div class="flex flex-col ml-3">
+                        <span class="text-sm font-bold"><a href="#">Skiyler</a> </span>
+                        <span class="text-xs text-gray-500"><a href="#">@SkylerDevops</a> </span>
+                      </div>
+                    </div>
+                      <p class="text-sm mt-5 pb-10">Just finished "Automation with windows" <a href="#" class="text-pink-500">#Powershell </a> Scripts" on <a href="#" class="text-pink-500">@pluralsight</a> form <a href="#" class="text-pink-500">@JeffHicks</a>. It was really well explained. learned a few things, definitely would recommend if you need to do some PS ☺️
+                      </p>
+                      <div class="flex absolute bottom-0 left-0">
+                        <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                        <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                        <a href="#" class="w-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                      </div>
+                    </div>
+                    <img src="img/twitter-logo.png" alt="" class="absolute right-4 top-4 w-4">
+                  </div>
+              </div>
+              <div class="w-1/3 p-3" >
+                <div class="bg-white rounded-lg p-5 relative h-full">
+                  <div class="relative h-full">
+                  <div class="flex">
+                    <a href="#" class="inline-block"><img src="img/face.jpg" alt="" class="inline-block" style="width: 36px; height: 36px;"></a>
+                    <div class="flex flex-col ml-3">
+                      <span class="text-sm font-bold"><a href="#">Javier Montero</a> </span>
+                      <span class="text-xs text-gray-500"><a href="#">@DataSlugger</a> </span>
+                    </div>
+                  </div>
+                    <p class="text-sm mt-5 pb-10">I love the schedule reminders feature that <a href="#" class="text-pink-500">@pluralsight</a> has added (well not sure when, but today I saw that) you make more simple my life. good job huys. <a href="#" class="text-pink-500">#learning https://t.co/OEEjxVQJbm</a> 
+                    <div class="flex absolute bottom-0 left-0">
+                      <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                      <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                      <a href="#" class="w-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                    </div>
+                  </div>
+                  <img src="img/twitter-logo.png" alt="" class="absolute right-4 top-4 w-4">
+                </div>
+            </div>
+            <div class="w-1/3 p-3" >
+              <div class="bg-white rounded-lg p-5 relative h-full">
+                <div class="relative h-full">
+                <div class="flex">
+                  <a href="#" class="inline-block"><img src="img/face.jpg" alt="" class="inline-block" style="width: 36px; height: 36px;"></a>
+                  <div class="flex flex-col ml-3">
+                    <span class="text-sm font-bold"><a href="#">kayode Omotoye</a> </span>
+                    <span class="text-xs text-gray-500"><a href="#">@kontrepid</a> </span>
+                  </div>
+                </div>
+                  <p class="text-sm mt-5 pb-10">One reason I love <a href="#" class="text-pink-500">@pluralsight</a> traning is how they curate similar courses on a subject into a learning path. The diversity of content delivery &amp; repetition of salient points by the SMEs helps to make the learning process efficient and memorable. Kudos to the team. 
+                  </p>
+                  <div class="flex absolute bottom-0 left-0">
+                    <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                    <a href="#" class="w-4  mr-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                    <a href="#" class="w-4"><img src="img/twitter-reply-black.png" alt=""></a>
+                  </div>
+                </div>
+                <img src="img/twitter-logo.png" alt="" class="absolute right-4 top-4 w-4">
+              </div>
+          </div>
+          </div>
+      </div>
+      <!-- .swiper-slide -->
+    </div>
+    <!-- .swiper-wrapper -->
+    <div class="justify-start swiper-button-prev text-xs  text-white absolute left-0"></div>
+    <div class="justify-end swiper-button-next  text-xs text-white absolute right-0"></div>
+</div>
+</div>
+</section>
+
+<section class="w-full bg-center bg-cover" style="background-image: url(img/impact-book-bg.jpg);">
+  <div class="mx-auto" style="max-width: 1400px;">
+  <div class="w-1/2 px-5 py-16">
+    <img src="img/one-logo.png" alt="" style="margin-left: -40px;">
+    <h3 class="text-white font-black text-4xl">See our growth, progress and evolution</h3>
+    <p class="text-white mt-5">At Pluralsight, we see first-hand every day how technology makes the impossible, possible. It’s why Pluralsight One exists: To advance our mission of democratizing technology skills, challenging assumptions about solutions and create significant, lasting social impact.</p>
+    <a href="#" class="inline-block bg-gradient-to-r from-red-500 to-pink-500 text-white  font-bold mt-5 px-8 py-3 mr-3 rounded-sm">VIEW OUR 2020 IMPACT BOOK </a>
+    <a href="#" class="inline-block text-white  font-bold mt-5 border px-8 py-3 rounded-sm">FOR NONPROFITS </a>
+  </div>
+</div>
+</section>
+
+<section class=" px-5 py-24 " style="background-color: #181818;">
+  <div class=" mx-auto" style="max-width: 1400px;">
+    <div class=" flex justify-between content-center items-center">
+<p class="font-black text-white text-4xl">Insights that give you an edge</p>
+<a href="#" class=" bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold mt-5 px-16 py-3 rounded-sm">TRY FOR FREE </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full " style="background-color: #222;">
+  <div class="mx-auto" style="max-width: 1400px;">
+  <div class="lg:justify-around xl:justify-between h-auto flex justify-between content-around py-16">
+    <div class="flex-none ">
+      <h4 class="text-white font-black text-sm mb-10">SOLUTIONS</h4>
+      <div class="flex flex-col justify-around">
+        <a href="#" class="text-gray-500 text-sm pb-2">Pluralsight Skills</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Pluralsight Flow</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Government</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Gift of Pluralsight</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">View Pricing</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Contact Sales</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Skill up for free</a>
+      </div>
+    </div>
+    <div class="flex-none">
+      <h4 class="text-white font-black text-sm mb-10">PLATFORM</h4>
+      <div class="flex flex-col justify-around">
+        <a href="#" class="text-gray-500 text-sm pb-2">Browse library</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Role IQ</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Skill IQ</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Iris</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Authors</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Professional Services</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Technolohy Index</a>
+      </div>
+    </div>
+    <div class="flex-none">
+      <h4 class="text-white font-black text-sm mb-10">COMPANY</h4>
+      <div class="flex flex-col justify-around">
+        <a href="#" class="text-gray-500 text-sm pb-2">About us</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Customer stories</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Careers</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Blog</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Newsroom</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Resource center</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Guides</a>
+      </div>
+    </div>
+    <div class="flex-none">
+      <h4 class="text-white font-black text-sm mb-10">RESOURCES</h4>
+      <div class="flex flex-col justify-around">
+        <a href="#" class="text-gray-500 text-sm pb-2">Download Pluralsight</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Events</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Teach</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">partners</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Affiliate program</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">PluralsightOne.org</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">subscribe</a>
+      </div>
+    </div>
+    <div class="flex-none">
+      <h4 class="text-white font-black text-sm mb-10">SUPPORT</h4>
+      <div class="flex flex-col justify-around">
+        <a href="#" class="text-gray-500 text-sm pb-2">Contact</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Help center</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">IP whitelist</a>
+        <a href="#" class="text-gray-500 text-sm pb-2">Sitemap</a>
+      </div>
+    </div>
+  </div>
+<div class="border-t border-gray-600 py-16">
+  <div class="flex justify-between items-center relative lg:justify-around xl:justify-between">
+    <div >
+      <img src="img/ps-icon.png" alt="" class="inline-block w-8 h-8 mr-5"><span class="text-gray-400 text-xs">Copyright © 2004 - 2021 Pluralsight LLC. All rights reserved</span></div>
+      <div class="flex justify-around content-around ">
+        <div class="flex-none" style="min-width: 130px;">
+          <a href="#" class="text-white text-xs" >Terms of Use</a></div>
+          <div class="flex-none" style="min-width: 130px;">
+        <a href="#" class=" text-white text-xs">Privacy Policy</a>
+        </div>
+        <div class="flex flex-none">
+          <a href="#"><img src="img/Facebook_Icon.svg" alt="" class="h-4 mr-3"></a>
+          <a href="#"><img src="img/Facebook_Icon.svg" alt="" class="h-4 mr-3"></a>
+          <a href="#"><img src="img/Facebook_Icon.svg" alt="" class="h-4 mr-3"></a>
+          <a href="#"><img src="img/Facebook_Icon.svg" alt="" class="h-4 mr-3"></a>
+          <a href="#"><img src="img/Facebook_Icon.svg" alt="" class="h-4 "></a>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</footer>
+<div class="fixed w-12 h-12 bottom-10 right-10 z-50">
+  <a class="block bg-pink-600 w-full h-full rounded-lg " href="#" alt="">
+    <div class="h-full flex items-center content-center justify-center text-white text-lg" >
+      <i class="fa fa-comments-o" aria-hidden="true"></i>
+    </div>
+
+  </a>
+</div>
+<script>
+
+$("ul.gnb li.sub_btn").on("click",function(){
+  $(this).toggleClass("active");
+  $(this).siblings().removeClass("active");
+  $(this).find("#sub-menu").toggleClass("hidden");
+  $(this).siblings().find("#sub-menu").addClass("hidden");
+});
+
+$(".sign").on("click",function(){
+  $(this).toggleClass("active");
+  $(".sign #sub-menu").toggleClass("hidden");
+});
+$(".search_list").on("click",function(){
+  $(this).find(".s_con").toggleClass("hidden");
+});
+
+  var mySwiper = new Swiper ('.swiper-container', {
+          // Optional parameters
+          loop: true,
+          // Navigation arrows
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+        
+      });
+
+</script>
+  </body>
+
+  
+</html>
