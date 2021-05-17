@@ -16,7 +16,7 @@
 <img src="https://user-images.githubusercontent.com/37858979/118428601-c3f37380-b70a-11eb-863c-2aa078601bc0.png" alt="레이아웃 구성" width="500">
 
 크게 HEADER / MAIN / FOOTER 로 나누었으며,
-MAIN안에 있는 각각의 콘텐츠를 section태그로 구분하여 구현하였습니다.
+MAIN안에 있는 각각의 콘텐츠를 태그로 구분하여 구현하였습니다.
 
 ## 트러블 이슈
 - tailwindCSS를 cdn으로 적용하다보니 커스터마이징을 할 수 없었습니다. 원하는 width값이나 flex를 활용하지 못하는 부분이 생겼고 이 부분을 해결하기 위해 인라인 스타일로 적용하여 홈페이지를 구현하였습니다.
